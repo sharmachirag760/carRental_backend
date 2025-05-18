@@ -18,9 +18,9 @@ exports.protect = async (req,res,next) => {
         return res.status(401).json({message : "Invalid or expired token..!!"});
      }
      console.log(decoded);
-     const admin = await User.findById(decoded.admin);
+     const admin = await Admin.findById(decoded.user);
      if(!admin){
-        return res.status(401).json({message : "User not found"});
+        return res.status(401).json({message : "Admin not found"});
      }
      req.admin = admin;
      next();

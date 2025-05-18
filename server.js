@@ -23,6 +23,3 @@ app.use('/api/admin',adminRoutes);
 const PORT = process.env.PORT;
 app.listen(PORT,()=> console.log(`Server is listening to ${PORT}`));
 
-PORT = 8500
-JWT_SECRET = 'hellothisisstrong'
-MONGO_URL = 'mongodb+srv://sharmachirag760:SByVCu1QfwALzYDx@cluster0.vsnaf9o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'

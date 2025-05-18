@@ -77,7 +77,7 @@ const loginAdmin = async (req,res) =>{
 
 const getProfile = async (req,res) => {
     try {
-        const admin = await User.findById(req.admin._id).select('-password');
+        const admin = await Admin.findById(req.admin._id).select('-password');
         res.json({
             success: true,
             data : {
@@ -107,7 +107,7 @@ const updateProfile = async (req,res) => {
         //         message : "Email already in use...!!"
         //     })
         // }
-        const admin = await User.findByIdAndUpdate(
+        const admin = await Admin.findByIdAndUpdate(
             req.admin._id,
             {name, email, phone},
             { new : true }
